@@ -1,0 +1,913 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(94, 94, 94);
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+
+/* NAVIGATION BAR */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+header .header__logo {
+  height: 2.5rem;
+}
+
+header .header__logo img {
+  height: 100%;
+}
+
+header .header__burguerMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.8rem;
+  background-color: rgba(69, 69, 69, 0.245);
+  border: none;
+  color: rgb(54, 54, 54);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input#menu {
+  display: none;
+}
+
+header button.header__burguerMenu:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+input#menu:checked~.header__menu {
+  display: block;
+}
+
+header .header__menu {
+  color: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header .header__menu .header__closeMenu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+
+}
+
+header .header__menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+header .header__menu ul li {
+  margin: 5px;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: ease-in 0.2s;
+  transition: ease-out 0.5s;
+}
+
+header .header__menu ul li a {
+  color: #ffffff;
+  transition: ease-in 0.2s;
+  transition: ease-out 0.5s;
+}
+
+header .header__menu ul li:hover {
+  background-color: #a9bf04;
+  text-transform: uppercase;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  header .header__burguerMenu {
+    display: none;
+  }
+
+  header .header__menu .header__closeMenu {
+    display: none;
+  }
+
+  header .header__menu {
+    display: initial;
+    position: inherit;
+    background-color: white;
+  }
+
+  header .header__menu ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  header .header__menu ul li a {
+    color: rgb(94, 94, 94);
+  }
+
+  header .header__menu ul li:hover {
+    text-transform: none;
+  }
+
+  header .header__menu ul li a:hover {
+    color: #ffffff;
+  }
+
+}
+
+/* LANDING */
+
+.landingHome {
+  width: 100vw;
+  height: 100vh;
+  background: url('../img/banner.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landingContact {
+  width: 100%;
+  height: 30vh;
+  background: url('../img/bannerContact.jpg') no-repeat bottom center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landingActividades {
+  width: 100%;
+  height: 30vh;
+  background: url('../img/bannerActividades.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landingGallery {
+  width: 100%;
+  height: 30vh;
+  background: url('../img/bannerGallery.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landingOutdoorTips {
+  width: 100%;
+  height: 30vh;
+  background: url('../img/bannerOutdoorTips.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landingReservas {
+  width: 100%;
+  height: 30vh;
+  background: url('../img/bannerReservas.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px #A9BF04;
+}
+
+.landing__inner {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+}
+
+.landing__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.landing__contentLogo {
+  width: 60%;
+}
+
+.landing__contentText {
+  color: #ffffff;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 0px 0px 10px rgba(50, 50, 50, 0.603);
+  padding: 20px;
+  font-size: 2rem;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .landing__contentLogo {
+    width: 50%;
+  }
+
+  .landing__contentText {
+    color: #ffffff;
+    font-size: 4rem;
+  }
+
+  .landingContact .landing__inner {
+    padding: 20px;
+  }
+
+  .landingActividades .landing__inner {
+    padding: 20px;
+  }
+
+  .landingGallery .landing__inner {
+    padding: 20px;
+  }
+
+  .landingOutdoorTips .landing__inner {
+    padding: 20px;
+  }
+
+  .landingReservas .landing__inner .landing__contentLogo {
+    width: 100%;
+  }
+
+}
+
+/* BODY CONTENT */
+
+/* WELCOME */
+
+.main__welcome {
+  padding: 10%;
+  display: grid;
+  grid-template-rows: 3fr, 1fr;
+  justify-content: center;
+  text-align: center;
+}
+
+.main__welcomeText {
+  background-color: #f23105;
+  border-radius: 30px 0 30px;
+  padding: 5%;
+  display: grid;
+  grid-template-rows: 1fr, 3fr;
+  justify-content: center;
+  box-shadow: 0 0 10px black;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .main__welcomeText {
+    background-color: #f2310595;
+    border-radius: 50px 0 50px;
+  }
+
+}
+
+/* WELCOME CAROUSEL */
+
+.main__welcomeCarousel {
+  height: auto;
+  display: grid;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  box-shadow: 0 0 10px grey;
+}
+
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  6.25% {
+    transform: translateX(-10%);
+  }
+
+  12.5% {
+    transform: translateX(-20%);
+  }
+
+  18.75% {
+    transform: translateX(-30%);
+  }
+
+  25% {
+    transform: translateX(-40%);
+  }
+
+  31.25% {
+    transform: translateX(-50%);
+  }
+
+  37.5% {
+    transform: translateX(-60%);
+  }
+
+  43.75% {
+    transform: translateX(-70%);
+  }
+
+  50% {
+    transform: translateX(-80%);
+  }
+
+  56.25% {
+    transform: translateX(-70%);
+  }
+
+  62.5% {
+    transform: translateX(-60%);
+  }
+
+  68.75% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-40%);
+  }
+
+  81.25% {
+    transform: translateX(-30%);
+  }
+
+  87.5% {
+    transform: translateX(-20%);
+  }
+
+  93.75% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+
+}
+
+.carousel {
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow-x: hidden;
+}
+
+.slides {
+  padding: 0;
+  margin: 0;
+  /* 100% por cada slide */
+  width: 1000%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  transition: transform 1s ease-in-out;
+  animation: carousel-slide infinite ease-in-out 30s;
+}
+
+.slide {
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 .25rem;
+  display: inline-block;
+  width: .75rem;
+  height: .75rem;
+}
+
+
+
+/* MAIN CONTENT */
+
+
+.main__content {
+  margin: 20px;
+}
+
+.main__contentAbout {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  border-radius: 30px 0 30px;
+  background-color: #0388a66c;
+  box-shadow: 0 0 15px #f2310545;
+  margin: 20px;
+}
+
+.main__contentAboutItem {
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+
+.main__contentAbout img {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 0 0 0;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .main__contentAboutItem1Img {
+    grid-area: main__contentAboutItem1Img;
+
+  }
+
+  .main__contentAboutItem1Text {
+    grid-area: main__contentAboutItem1Text;
+
+  }
+
+  .main__contentAboutItem2Img {
+    grid-area: main__contentAboutItem2Img;
+
+  }
+
+  .main__contentAboutItem2Text {
+    grid-area: main__contentAboutItem2Text;
+
+  }
+
+  .main__contentAboutItem3Img {
+    grid-area: main__contentAboutItem3Img;
+
+  }
+
+  .main__contentAboutItem3Text {
+    grid-area: main__contentAboutItem3Text;
+
+  }
+
+  .main__contentAbout {
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    ;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+
+
+  /* ++++++
+      LAS SIGUIENTES ANIMACIONES FUNCIONAN, PERO LA IDEA ES QUE SE ACTIVEN SOLO CUANDO LOS ELEMENTOS ESTEN VISIBLES EN EL VIEWPORT
+      O SEA A MEDIDA QUE SCROLLEO POR LA PAGINA
+      ESTOY INVESTIGANDO ESO, ES UN MONTONASO DE CODIGO QUE QUIERO ENTENDER BIEN Y NO SOLO COPIAR Y PEGAR,
+      PERO CUANDO LO DOMINE LO APLICO
+
+      SI TENES ALGUNA PAGINA QUE LO SIMPLIFIQUE BIENVENIDA SEA  =))
+      ++++++ */
+
+  .main__contentAbout1 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "main__contentAboutItem1Img   main__contentAboutItem1Text";
+    animation-name: slide-inAbout1;
+    animation-duration: .5s;
+  }
+
+  @keyframes slide-inAbout1 {
+    0% {
+      transform: translateX(+500%)
+    }
+
+    100% {
+      transform: translateX(0%)
+    }
+  }
+
+  .main__contentAbout2 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "main__contentAboutItem2Text   main__contentAboutItem2Img";
+    animation-name: slide-inAbout2;
+    animation-duration: .5s;
+  }
+
+
+  @keyframes slide-inAbout2 {
+    0% {
+      transform: translateX(-500%)
+    }
+
+    100% {
+      transform: translateX(0%)
+    }
+  }
+
+  .main__contentAbout3 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "main__contentAboutItem3Img   main__contentAboutItem3Text";
+    animation-name: slide-inAbout3;
+    animation-duration: .5s;
+  }
+
+  @keyframes slide-inAbout3 {
+    0% {
+      transform: translateX(+500%)
+    }
+
+    100% {
+      transform: translateX(0%)
+    }
+  }
+
+  .main__contentAboutItem {
+    text-align: left;
+    align-content: center;
+  }
+
+  .main__contentAboutItem2Text {
+    text-align: right;
+  }
+
+  .main__contentAboutItem ul li {
+    list-style: disc;
+  }
+
+  .main__contentAbout img {
+    border-radius: 50px 0 50px;
+    box-shadow: 0 0 10px #A9BF04;
+  }
+
+}
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(#0388A6, transparent);
+  box-shadow: 15px rgb(54, 54, 54);
+}
+
+.footer__contact {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-content: left;
+}
+
+.footer__contactLogo {
+  height: 100%;
+}
+
+.footer__contactLogo img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.footer__links {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer__links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  opacity: .2;
+  transition: ease-in .2s;
+  transition: ease-out .5s;
+
+}
+
+.footer__links a:hover {
+  opacity: 1;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .footer__contact {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__contactLogo {
+    width: 150px;
+  }
+
+  .footer__contactLogo img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .footer__contactText {
+    text-align: right;
+  }
+
+  .footer__contactText {
+    font-size: 130%;
+  }
+
+}
+
+
+/* ++++++++++++  CONTACT  ++++++++++++ */
+
+.main__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__extraInfo {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contact__extraInfo div {
+  margin: 15px;
+  border-radius: 30px 0 30px;
+  padding: 5%;
+  display: grid;
+  grid-template-rows: 1fr, 3fr;
+  justify-content: center;
+  box-shadow: 0 0 10px black;
+}
+
+.contact__extraInfo h2 {
+  margin-bottom: 15px;
+}
+
+.contact__extraInfo div a {
+  text-shadow: 0 0 1px black;
+}
+
+.giftCards {
+  background-color: #a9bf04;
+}
+
+.booking {
+  background-color: #f23105;
+}
+
+/* CONTACT FORM */
+
+fieldset {
+  border: none;
+}
+
+.contact__form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact__formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.contact__formInput input {
+  margin: 10px;
+  height: 2.5rem;
+  padding: 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.contact__formCheckbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__formCheckboxItem {
+  padding: 10px;
+}
+
+
+.contact__formMessage--buttons {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.contact__formMessage--buttons button {
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: white;
+  transition: .1s ease-in;
+  transition: .3s ease-out;
+}
+
+.contact__formMessage--buttons button[type="submit"] {
+  background-color: #0388A695;
+}
+
+.contact__formMessage--buttons button[type="reset"] {
+  background-color: #f2310595;
+}
+
+
+.contact__formMessage--buttons button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+}
+
+
+.GoogleMaps {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.GoogleMaps h4 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+  .main__contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__extraInfo {
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 0;
+  }
+
+  .contact__extraInfo div {
+    margin: 25px;
+    padding: 8%;
+    border-radius: 50px 0 50px;
+  }
+
+  .contact__extraInfo div a {
+    font-size: 1.1rem;
+  }
+
+  .giftCards {
+    background-color: #a9bf0495;
+  }
+
+
+  .booking {
+    background-color: #f2310595;
+  }
+
+}
+
+
+/* ACTIVIDADES */
+
+/* GLOBOS DE INFORMACION */
+
+.balloon ul {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.balloon ul li {
+  display: inline-block;
+  margin: 10px 0 10PX 0;
+  padding: 10px;
+  border-radius: 20px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #a9bf04da;
+  box-shadow: 3px 3px 8px black;
+  font-size: 90%;
+}
+
+.balloon ul li img {
+  box-shadow: 3px 3px 8px black;
+  border-radius: 10px;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .balloon ul li {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    background-color: #a9bf049f;
+    font-size: initial;
+    text-align: right;
+  }
+
+  .balloon ul li img {
+    border: 1px solid black;
+    box-shadow: 5px 5px 8px black;
+    border-radius: 15px;
+  }
+  
+}
