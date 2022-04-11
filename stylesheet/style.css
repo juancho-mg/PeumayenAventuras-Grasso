@@ -916,29 +916,22 @@ fieldset {
 /* GALERIA DE IMAGENES */
 
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
+
 }
 
 .gallery img {
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px;
+
 }
 
 /* Media queries */
 
 @media screen and (min-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
+
   }
 
   .gallery img {
-    margin: 0;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px;
+
   }
   
 }
