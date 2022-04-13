@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -24,16 +23,20 @@ body {
 
 /* NAVIGATION BAR */
 
-nav {
-  background-color: #f23105;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
   padding: 0.5rem 1rem;
   z-index: 999;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-
-.header__logo {
-  height: 4rem;
+header .header__logo {
+  height: 2.5rem;
 }
 
 header .header__logo img {
@@ -115,15 +118,49 @@ header .header__menu ul li:hover {
   text-transform: uppercase;
 }
 
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  header .header__burguerMenu {
+    display: none;
+  }
+
+  header .header__menu .header__closeMenu {
+    display: none;
+  }
+
+  header .header__menu {
+    display: initial;
+    position: inherit;
+    background-color: white;
+  }
+
+  header .header__menu ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  header .header__menu ul li a {
+    color: rgb(94, 94, 94);
+  }
+
+  header .header__menu ul li:hover {
+    text-transform: none;
+  }
+
+  header .header__menu ul li a:hover {
+    color: #ffffff;
+  }
+
+}
+
 /* LANDING */
 
 .landingHome {
   width: 100vw;
   height: 100vh;
-  background: url("../img/bannerIndex.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('../img/banner.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -134,7 +171,7 @@ header .header__menu ul li:hover {
 
 .landingContact {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url('../img/bannerContact.jpg') no-repeat bottom center;
   background-size: cover;
   display: flex;
@@ -146,7 +183,7 @@ header .header__menu ul li:hover {
 
 .landingActividades {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url('../img/bannerActividades.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -158,7 +195,7 @@ header .header__menu ul li:hover {
 
 .landingGallery {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url('../img/bannerGallery.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -170,7 +207,7 @@ header .header__menu ul li:hover {
 
 .landingOutdoorTips {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url('../img/bannerOutdoorTips.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -182,7 +219,7 @@ header .header__menu ul li:hover {
 
 .landingReservas {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url('../img/bannerReservas.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -200,10 +237,6 @@ header .header__menu ul li:hover {
   text-align: right;
 }
 
-.landingHome .landing__inner {
-  padding-top: 10%;
-}
-
 .landing__content {
   display: flex;
   flex-direction: column;
@@ -212,13 +245,7 @@ header .header__menu ul li:hover {
 
 
 .landing__contentLogo {
-  width: 50%;
-}
-
-.landing__contentLogo--Pages {
-  max-width: 40%;
-  margin-top: 40px;
-  object-fit: cover;
+  width: 60%;
 }
 
 .landing__contentText {
@@ -240,6 +267,26 @@ header .header__menu ul li:hover {
   .landing__contentText {
     color: #ffffff;
     font-size: 4rem;
+  }
+
+  .landingContact .landing__inner {
+    padding: 20px;
+  }
+
+  .landingActividades .landing__inner {
+    padding: 20px;
+  }
+
+  .landingGallery .landing__inner {
+    padding: 20px;
+  }
+
+  .landingOutdoorTips .landing__inner {
+    padding: 20px;
+  }
+
+  .landingReservas .landing__inner .landing__contentLogo {
+    width: 100%;
   }
 
 }
@@ -400,15 +447,21 @@ header .header__menu ul li:hover {
 /* MAIN CONTENT */
 
 
+.main__content {
+  margin: 20px;
+}
+
 .main__contentAbout {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
   border-radius: 30px 0 30px;
   background-color: #0388a66c;
   box-shadow: 0 0 15px #f2310545;
-  margin: 10px;
+  margin: 20px;
 }
 
 .main__contentAboutItem {
-/*   text-align: center; */
+  text-align: center;
   padding: 20px;
   display: block;
 }
@@ -419,7 +472,6 @@ header .header__menu ul li:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 20px 0 0 0;
-  box-shadow: 3px 3px 8px black;
 }
 
 /* Media queries */
@@ -458,11 +510,24 @@ header .header__menu ul li:hover {
 
   .main__contentAbout {
     max-height: auto;
+    display: flex;
+    flex-direction: column;
+    ;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
   }
 
+
+
+  /* ++++++
+      LAS SIGUIENTES ANIMACIONES FUNCIONAN, PERO LA IDEA ES QUE SE ACTIVEN SOLO CUANDO LOS ELEMENTOS ESTEN VISIBLES EN EL VIEWPORT
+      O SEA A MEDIDA QUE SCROLLEO POR LA PAGINA
+      ESTOY INVESTIGANDO ESO, ES UN MONTONASO DE CODIGO QUE QUIERO ENTENDER BIEN Y NO SOLO COPIAR Y PEGAR,
+      PERO CUANDO LO DOMINE LO APLICO
+
+      SI TENES ALGUNA PAGINA QUE LO SIMPLIFIQUE BIENVENIDA SEA  =))
+      ++++++ */
 
   .main__contentAbout1 {
     display: grid;
@@ -486,12 +551,12 @@ header .header__menu ul li:hover {
   }
 
   .main__contentAboutItem {
-/*     text-align: left; */
+    text-align: left;
     align-content: center;
   }
 
   .main__contentAboutItem2Text {
-/*     text-align: right; */
+    text-align: right;
   }
 
   .main__contentAboutItem ul li {
@@ -510,12 +575,32 @@ header .header__menu ul li:hover {
 /* FOOTER */
 
 footer {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background: linear-gradient(#0388A6, transparent);
+  box-shadow: 15px rgb(54, 54, 54);
+}
+
+.footer__contact {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-content: left;
+}
+
+.footer__contactLogo {
+  height: 100%;
+}
+
+.footer__contactLogo img {
+  width: 50%;
+  object-fit: cover;
 }
 
 .footer__links {
   padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -525,10 +610,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
   color: rgba(0, 0, 0, 0.4);
   font-size: 2rem;
-  height: 3.2rem;
-  width: 3.2rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -536,10 +622,41 @@ footer {
   opacity: .2;
   transition: ease-in .2s;
   transition: ease-out .5s;
+
 }
 
 .footer__links a:hover {
   opacity: 1;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .footer__contact {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__contactLogo {
+    width: 150px;
+  }
+
+  .footer__contactLogo img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .footer__contactText {
+    text-align: right;
+  }
+
+  .footer__contactText {
+    font-size: 130%;
+  }
+
 }
 
 

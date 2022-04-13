@@ -33,6 +33,9 @@
 
   <link rel="stylesheet" href="stylesheet/style.css">
 
+  <!-- ANIMATE.STYLE -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- TITLE -->
   <title>Peumayen Aventuras</title>
@@ -41,45 +44,56 @@
 
 <body>
 
+  
   <!-- NAVIGATION BAR -->
 
-  <header id="top">
-    <div class="header__logo">
-      <a href="index.html">
-        <img src="img/logosmall.png" alt="logo" />
-      </a>
-    </div>
-    <label for="menu" class="header__burguerMenu">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-    <input type="checkbox" id="menu">
-    <nav class="header__menu">
-      <label for="menu" class="header__closeMenu">
-        <i class="fa-solid fa-circle-xmark"></i>
-      </label>
-      <ul>
-        <li><a href="pages/actividades.html">Actividades</a></li>
-        <li><a href="pages/outdoorTips.html">Outdoor Tips</a></li>
-        <li><a href="pages/gallery.html">Galería</a></li>
-        <li><a href="pages/reservas.html" target="blank">Reservas</a></li>
-        <li><a href="pages/contact.html">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand header__logo" href="index.html"><img src="img/logosmall.png" alt="" class="animate__animated animate__bounceInLeft"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Actividades
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="pages/actividades.html#caminatas">Caminatas</a></li>
+                <li><a class="dropdown-item" href="pages/actividades.html#trekkings">Trekkings</a></li>
+                <li><a class="dropdown-item" href="pages/actividades.html#travesias">Travesías</a></li>
+                <li><a class="dropdown-item" href="pages/actividades.html#invernales">Invernales</a></li>
+                <li><a class="dropdown-item" href="pages/actividades.html#escalada">Escalada en Roca</a></li>
+                <li><a class="dropdown-item" href="pages/actividades.html#nocturnas">Nocturnas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/outdoorTips.html">Outdoor Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/gallery.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </header>
-
-
 
   <!-- LANDING -->
 
-
-
   <section class="landingHome">
-    <div class="landing__inner">
+    <div class="landing__inner container">
       <div class="landing__content">
 
         <img class="landing__contentLogo" src="img/logo.png" alt="">
 
-        <h1 class="landing__contentText">Preparate para vivir la tuya</h1>
+        <h1 class="landing__contentText animate__animated animate__pulse">Preparate para vivir la tuya</h1>
 
       </div>
     </div>
@@ -146,14 +160,14 @@
       </section>
     </div>
 
-    <section class="main__content">
-
+    <section class="container main__content">
+    <div class="row">
       <!-- ITEM 1 -->
       <div class="main__contentAbout main__contentAbout1">
         <div class="main__contentAboutItem main__contentAboutItem1Img">
           <img class="" src="img/gallery/gallery (19).jpg" alt="">
         </div>
-        <div class="main__contentAboutItem main__contentAboutItem1Text">
+        <div class="main__contentAboutItem main__contentAboutItem1Text text-xs-center text-md-left">
           <h4>PEUMAYÉN</h4>
           <p>Peumayén proviene de la lengua Mapuche Mapudungun y significa "Lugar Soñado"
             Nos gusta compartir nuestra experiencia a personas enamoradas de la naturaleza como vos.
@@ -167,7 +181,7 @@
 
       <div class="main__contentAbout main__contentAbout2">
 
-        <div class="main__contentAboutItem main__contentAboutItem2Img">
+        <div class="main__contentAboutItem main__contentAboutItem2Img  text-xs-center text-md-right">
           <img src="img/gallery/gallery (29).jpg" alt="">
         </div>
         <div class="main__contentAboutItem main__contentAboutItem2Text">
@@ -183,7 +197,7 @@
 
       <!-- ITEM 3 -->
 
-      <div class="main__contentAbout main__contentAbout3">
+      <div class="main__contentAbout main__contentAbout3  text-xs-center text-md-left">
         <div class="main__contentAboutItem main__contentAboutItem3Img">
           <img src="img/gallery/gallery (18).jpg" alt="">
         </div>
@@ -209,32 +223,38 @@
 
     <!-- FOOTER CONTACT -->
 
-    <section class="footer__contact">
-
-      <div class="footer__contactLogo">
-        <img src="img/logosmallbw.png" alt="">
+    <section class="footer__contact container-fluid">
+      <div class="row">
+        <div class="footer__contactLogo col-12 col-md-4">
+          <img src="img/logosmallbw.png" alt="">
+        </div>
+        <div class="footer__contactText col-12 col-md-8 text-md-center">
+          <h4>Contacto</h4>
+          <h5><a href="mailto:info@peumayenaventuras.com" target="_blank">info@peumayenaventuras.com</a></h5>
+          <h5><a href="tel:+5492944142732" target="blank">+54 9 294 414 2732</a></h5>
+          <h5><a href="https://g.page/PEUMAYEN-AVENTURAS" target="_blank">San Carlos de Bariloche - Patagonia -
+              Argentina</a></h5>
+        </div>
       </div>
-
-      <div class="footer__contactText">
-        <h4>Contacto</h4>
-        <h5><a href="mailto:info@peumayenaventuras.com" target="_blank">info@peumayenaventuras.com</a></h5>
-        <h5><a href="tel:+5492944142732" target="blank">+54 9 294 414 2732</a></h5>
-        <h5><a href="https://g.page/PEUMAYEN-AVENTURAS" target="_blank">San Carlos de Bariloche - Patagonia -
-            Argentina</a></h5>
-      </div>
+    </div>
     </section>
 
     <!-- FOOTER LINKS -->
 
-    <section class="footer__media">
-      <div class="footer__links">
-        <a href="https://www.facebook.com/PeumayenAventuras/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://m.me/PeumayenAventuras/" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
-        <a href="https://api.whatsapp.com/send/?phone=5492944142732" target="_blank"><i
+<!-- 
+    REVER ESTO -->
+
+
+
+    <section class="footer__media container-fluid">
+      <div class="footer__links row align-items-center d-flex justify-content-between">
+        <a href="https://www.facebook.com/PeumayenAventuras/" target="_blank" class=""><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://m.me/PeumayenAventuras/" target="_blank" class=""><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=5492944142732" target="_blank" class=""><i
             class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/peumayenaventuras/" target="_blank"><i
+        <a href="https://www.instagram.com/peumayenaventuras/" target="_blank" class=""><i
             class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:info@peumayenaventuras.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+        <a href="mailto:info@peumayenaventuras.com" target="_blank" class=""><i class="fa-solid fa-at"></i></a>
       </div>
     </section>
 
