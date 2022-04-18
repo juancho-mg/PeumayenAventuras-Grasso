@@ -5,7 +5,6 @@
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   max-width: 100%;
-  max-height: 100%;
 }
 
 li {
@@ -18,99 +17,43 @@ a {
 }
 
 body {
-  background-color: rgb(250, 250, 250);
+background: url(../img/body-bg.png) no-repeat top left;
+background-size: 100% 100%;
+
 }
 
 
 /* NAVIGATION BAR */
-
 nav {
-  background-color: #f23105;
-  padding: 0.5rem 1rem;
-  z-index: 999;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  max-height: auto;
 }
-
+.navbar div {
+  padding: 0.5rem 1rem;
+}
 
 .header__logo {
   height: 4rem;
 }
 
-header .header__logo img {
+.header__logo img {
   height: 100%;
 }
 
-header .header__burguerMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.8rem;
-  background-color: rgba(69, 69, 69, 0.245);
-  border: none;
-  color: rgb(54, 54, 54);
-  border-radius: 5px;
-  cursor: pointer;
+.dropdown-menu {
+  min-width: 200px;
+  background: url(../img/body-bg.png) no-repeat top left;
+  background-size: cover;
 }
 
-input#menu {
-  display: none;
-}
 
-header button.header__burguerMenu:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-input#menu:checked~.header__menu {
-  display: block;
-}
-
-header .header__menu {
-  color: white;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-header .header__menu .header__closeMenu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-
-}
-
-header .header__menu ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-header .header__menu ul li {
-  margin: 5px;
-  color: #ffffff;
-  font-weight: 800;
-  border-radius: 5px;
-  padding: 0.5rem;
+.dropdown-item {
   transition: ease-in 0.2s;
   transition: ease-out 0.5s;
 }
 
-header .header__menu ul li a {
+.dropdown-item:hover {
   color: #ffffff;
-  transition: ease-in 0.2s;
-  transition: ease-out 0.5s;
-}
 
-header .header__menu ul li:hover {
   background-color: #a9bf04;
   text-transform: uppercase;
 }
@@ -134,7 +77,7 @@ header .header__menu ul li:hover {
 
 .landingContact {
   width: 100%;
-  height: 40vh;
+  height: 20rem;
   background: url('../img/bannerContact.jpg') no-repeat bottom center;
   background-size: cover;
   display: flex;
@@ -146,20 +89,8 @@ header .header__menu ul li:hover {
 
 .landingActividades {
   width: 100%;
-  height: 40vh;
+  height: 20rem;
   background: url('../img/bannerActividades.jpg') no-repeat center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 1px 15px #A9BF04;
-}
-
-.landingGallery {
-  width: 100%;
-  height: 40vh;
-  background: url('../img/bannerGallery.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -170,7 +101,7 @@ header .header__menu ul li:hover {
 
 .landingOutdoorTips {
   width: 100%;
-  height: 40vh;
+  height: 20rem;
   background: url('../img/bannerOutdoorTips.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -182,7 +113,7 @@ header .header__menu ul li:hover {
 
 .landingReservas {
   width: 100%;
-  height: 40vh;
+  height: 20rem;
   background: url('../img/bannerReservas.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -212,12 +143,15 @@ header .header__menu ul li:hover {
 
 
 .landing__contentLogo {
+  margin-top: 6rem;
   width: 50%;
+  max-height: 50vh;
+  object-fit: contain;
 }
 
 .landing__contentLogo--Pages {
-  max-width: 40%;
-  margin-top: 40px;
+  margin-top: 6rem;
+  max-height: 10rem;
   object-fit: cover;
 }
 
@@ -486,12 +420,11 @@ header .header__menu ul li:hover {
   }
 
   .main__contentAboutItem {
-/*     text-align: left; */
     align-content: center;
   }
 
   .main__contentAboutItem2Text {
-/*     text-align: right; */
+    text-align: right;
   }
 
   .main__contentAboutItem ul li {
@@ -542,6 +475,14 @@ footer {
   opacity: 1;
 }
 
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+  .footer__contactText {
+    text-align: right;
+  }
+
+}
 
 /* ++++++++++++  CONTACT  ++++++++++++ */
 
@@ -574,14 +515,6 @@ footer {
 
 .contact__extraInfo div a {
   text-shadow: 0 0 1px black;
-}
-
-.contact__extraInfo .giftCards {
-  background-color: #a9bf04;
-}
-
-.contact__extraInfo .booking {
-  background-color: #f23105;
 }
 
 /* CONTACT FORM */
@@ -654,7 +587,7 @@ fieldset {
 
 
 .contact__formMessage--buttons button:hover {
-  background-color: white;
+  background-color: transparent;
   color: black;
   box-shadow: 0 0 5px black;
   cursor: pointer;
@@ -698,90 +631,55 @@ fieldset {
     font-size: 1.1rem;
   }
 
-  .contact__extraInfo .giftCards {
-    background-color: #a9bf0495;
+  .contact__form {
+    margin: 25px;
   }
-
-
-  .contact__extraInfo .booking {
-    background-color: #f2310595;
-  }
-
 }
 
 
 /* ACTIVIDADES */
 
-/* GLOBOS DE INFORMACION */
-
-.balloon ul {
-  margin: 10px;
+.main__content--Actividades {
   display: flex;
-  flex-direction: column;
+flex-direction: column;
 }
 
-.balloon ul li {
-  display: inline-block;
-  margin: 10px 0 10PX 0;
-  padding: 10px;
-  border-radius: 20px 0 20px;
-  text-align: center;
-  font-size: 2rem;
-  background-color: #a9bf04da;
-  box-shadow: 3px 3px 8px black;
-  font-size: 90%;
+.main__content--Actividades .card {
+  background-color: #0388a66c;
+  margin: 3%;
+  padding: 5px;
+  max-width: 90%;
+  max-height: 80vh;
 }
 
-.balloon ul li img {
-  box-shadow: 3px 3px 8px black;
-  border-radius: 10px;
+.btn-primary {
+  background-color: #a9bf04;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+  color: black;
 }
 
+.btn-primary:hover {
+  background-color: transparent;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px black;
+  color: white;
+}
 
+.card .carousel {
+  width: auto;
+}
 /* Media queries */
 
 @media screen and (min-width: 768px) {
-
-  .balloon ul li {
+  .main__content--Actividades {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    background-color: #a9bf049f;
-    font-size: initial;
-    text-align: right;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .balloon ul li img {
-    border: 1px solid black;
-    box-shadow: 5px 5px 8px black;
-    border-radius: 15px;
-  }
+
   
 }
-
-
-/* GALERIA DE IMAGENES */
-
-.gallery {
-
-}
-
-.gallery img {
-
-}
-
-/* Media queries */
-
-@media screen and (min-width: 768px) {
-  .gallery {
-
-  }
-
-  .gallery img {
-
-  }
-  
-}
-
 
 /* RESERVAS */
 
@@ -803,14 +701,17 @@ fieldset {
   text-shadow: 0 0 1px black;
 }
 
-.reservas .giftCards {
-  background-color: #a9bf04;
+  /* Tambien aplican en Contact */
+
+.giftCards {
+  background-color: #a9bf049d;
 }
 
-.reservas .booking {
-  background-color: #f23105;
+.booking {
+  background-color: #f23105b1;
 }
 
+/* Media queries */
 
 @media screen and (min-width: 768px) {
   .main__contact {
@@ -834,13 +735,14 @@ fieldset {
     font-size: 1.1rem;
   }
 
-  .reservas .giftCards {
-    background-color: #a9bf0495;
+  /* Tambien aplican en Contact */
+
+.giftCards {
+    background-color: #a9bf0452;
   }
 
-
-  .reservas .booking {
-    background-color: #f2310595;
+.booking {
+    background-color: #f2310560;
   }
 
 }
@@ -848,14 +750,16 @@ fieldset {
 
 /* OUTDOOR TIPS */
 
-.outdoorTips div {
-  margin: 15px;
-  border-radius: 30px 0 30px;
-  padding: 5%;
-  display: grid;
-  grid-template-rows: 1fr, 3fr;
-  justify-content: center;
-  box-shadow: 0 0 10px black;
+.accordion-item {  background-color: #a9bf0412;
+}
+
+.collapsed {
+  background-color: #a9bf0412;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f2310567;
+  color: black;
 }
 
 @media screen and (min-width: 768px) {
