@@ -27,7 +27,7 @@ footer {
       transition: ease-in .2s;
       transition: ease-out .5s;
 
-      &hover {
+      &:hover {
         opacity: 1;
       }
     }
@@ -37,7 +37,7 @@ footer {
     transition: ease-in .2s;
     transition: ease-out .5s;
 
-    &hover {
+    &:hover {
       color: white;
       text-shadow: 0 0 10px black;
     }

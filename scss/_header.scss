@@ -9,10 +9,9 @@ nav {
 
 .header__logo {
   height: 4rem;
-}
-
-.header__logo img {
-  height: 100%;
+  img {
+    height: 100%;
+  }
 }
 
 .dropdown-menu {
@@ -25,10 +24,9 @@ nav {
 .dropdown-item {
   transition: ease-in 0.2s;
   transition: ease-out 0.5s;
-}
-
-.dropdown-item:hover {
-  color: #ffffff;
-  background-color: #a9bf04;
-  text-transform: uppercase;
+  &:hover {
+    color: #ffffff;
+    background-color: #a9bf04;
+    text-transform: uppercase;
+  }
 }
