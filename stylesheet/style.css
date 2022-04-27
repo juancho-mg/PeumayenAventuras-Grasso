@@ -25,9 +25,8 @@ nav {
 
 .header__logo {
   height: 4rem; }
-
-.header__logo img {
-  height: 100%; }
+  .header__logo img {
+    height: 100%; }
 
 .dropdown-menu {
   min-width: 200px;
@@ -37,11 +36,10 @@ nav {
 .dropdown-item {
   transition: ease-in 0.2s;
   transition: ease-out 0.5s; }
-
-.dropdown-item:hover {
-  color: #ffffff;
-  background-color: #a9bf04;
-  text-transform: uppercase; }
+  .dropdown-item:hover {
+    color: #ffffff;
+    background-color: #a9bf04;
+    text-transform: uppercase; }
 
 /* LANDING */
 .landingHome {
@@ -156,12 +154,12 @@ footer {
       opacity: .2;
       transition: ease-in .2s;
       transition: ease-out .5s; }
-      footer .footer__links ahover {
+      footer .footer__links a:hover {
         opacity: 1; }
   footer .footer__contactText a {
     transition: ease-in .2s;
     transition: ease-out .5s; }
-    footer .footer__contactText ahover {
+    footer .footer__contactText a:hover {
       color: white;
       text-shadow: 0 0 10px black; }
 
