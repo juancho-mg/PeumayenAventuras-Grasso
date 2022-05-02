@@ -1,7 +1,7 @@
 {
   "name": "peumayen-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Restyling de Marca y sitio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/juancho-mg/peumayen-aventuras.git"
   },
-  "author": "",
+  "author": "Juan Martin Grasso",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/juancho-mg/peumayen-aventuras/issues"
