@@ -143,6 +143,7 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
+      align-items: center;
       color: rgba(0, 0, 0, 0.4);
       font-size: 2rem;
       height: 3.2rem;
@@ -150,12 +151,21 @@ footer {
       border-radius: 50%;
       background-color: white;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      align-items: center;
       opacity: .2;
       transition: ease-in .2s;
       transition: ease-out .5s; }
       footer .footer__links a:hover {
         opacity: 1; }
+  footer .fa-instagram:hover {
+    color: #C13584; }
+  footer .fa-facebook:hover {
+    color: #2956a3; }
+  footer .fa-facebook-messenger:hover {
+    color: #0076b8; }
+  footer .fa-whatsapp:hover {
+    color: #25D366; }
+  footer .fa-at:hover {
+    color: red; }
   footer .footer__contactText a {
     transition: ease-in .2s;
     transition: ease-out .5s; }
@@ -168,7 +178,6 @@ footer {
   .footer__contactText {
     text-align: right; } }
 
-/* BODY CONTENT */
 /* GREETING SECTION */
 .greeting {
   display: block;
@@ -272,6 +281,7 @@ footer {
 /* HOME - MAIN CONTENT */
 .main__contentAbout {
   border-radius: 30px 0 30px;
+  box-shadow: 0 0 10px black;
   background-color: #0388a66c;
   box-shadow: 0 0 15px #f2310545;
   margin: 10px; }
@@ -296,11 +306,11 @@ footer {
 
 .main__welcomeText {
   background-color: #f23105;
-  border-radius: 30px 0 30px;
   padding: 5%;
   display: grid;
   grid-template-rows: 1fr, 3fr;
   justify-content: center;
+  border-radius: 30px 0 30px;
   box-shadow: 0 0 10px black; }
 
 /* Media queries */
@@ -383,11 +393,11 @@ footer {
   text-align: center; }
   .contact__extraInfo div {
     margin: 15px;
-    border-radius: 30px 0 30px;
     padding: 5%;
     display: grid;
     grid-template-rows: 1fr, 3fr;
     justify-content: center;
+    border-radius: 30px 0 30px;
     box-shadow: 0 0 10px black; }
     .contact__extraInfo div a {
       text-shadow: 0 0 1px black; }
@@ -430,7 +440,7 @@ fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center; }
-  .contact__formMessage--buttons button {
+  .contact__formMessage--buttons .boton, .contact__formMessage--buttons .boton-enviar, .contact__formMessage--buttons .boton-reset {
     font-weight: bold;
     border: none;
     padding: 0.5rem 1rem;
@@ -439,15 +449,15 @@ fieldset {
     color: white;
     transition: .1s ease-in;
     transition: .3s ease-out; }
-    .contact__formMessage--buttons button[type="submit"] {
-      background-color: #0388A695; }
-    .contact__formMessage--buttons button[type="reset"] {
-      background-color: #f2310595; }
-    .contact__formMessage--buttons button:hover {
+    .contact__formMessage--buttons .boton:hover, .contact__formMessage--buttons .boton-enviar:hover, .contact__formMessage--buttons .boton-reset:hover {
       background-color: transparent;
       color: black;
       box-shadow: 0 0 5px black;
       cursor: pointer; }
+    .contact__formMessage--buttons .boton-enviar {
+      background-color: #0388A695; }
+    .contact__formMessage--buttons .boton-reset {
+      background-color: #f2310595; }
 
 .GoogleMaps {
   padding: 25px;
@@ -530,20 +540,20 @@ fieldset {
 
 .reservas div {
   margin: 15px;
-  border-radius: 30px 0 30px;
   padding: 5%;
   display: grid;
   grid-template-rows: 1fr, 3fr;
   justify-content: center;
+  border-radius: 30px 0 30px;
   box-shadow: 0 0 10px black; }
   .reservas div a {
     text-shadow: 0 0 1px black; }
 
 /* Tambien aplican en Contact */
-.giftCards {
+.balloon--giftCards {
   background-color: #a9bf049d; }
 
-.booking {
+.balloon--booking {
   background-color: #f23105b1; }
 
 /* Media queries */
@@ -559,9 +569,9 @@ fieldset {
       .reservas div a {
         font-size: 1.1rem; }
   /* Tambien aplican en Contact */
-  .giftCards {
+  .balloon--giftCards {
     background-color: #a9bf0452; }
-  .booking {
+  .balloon--booking {
     background-color: #f2310560; } }
 
 @media screen and (min-width: 1200px) {

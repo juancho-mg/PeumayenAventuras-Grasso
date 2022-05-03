@@ -15,6 +15,7 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
+      align-items: center;
       color: rgba(0, 0, 0, 0.4);
       font-size: 2rem;
       height: 3.2rem;
@@ -22,7 +23,6 @@ footer {
       border-radius: 50%;
       background-color: white;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      align-items: center;
       opacity: .2;
       transition: ease-in .2s;
       transition: ease-out .5s;
@@ -32,6 +32,8 @@ footer {
       }
     }
   }
+
+  @import 'maps-footer';
 
   .footer__contactText a {
     transition: ease-in .2s;
@@ -51,6 +53,4 @@ footer {
     text-align: right;
   }
 }
-
-/* BODY CONTENT */
 

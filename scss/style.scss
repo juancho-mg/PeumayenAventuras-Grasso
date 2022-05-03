@@ -24,6 +24,9 @@ body {
 @import 'header';
 @import 'landing';
 @import 'footer';
+@import 'mixins';
+
+
 
 /* GREETING SECTION */
 
@@ -185,7 +188,7 @@ body {
 /* HOME - MAIN CONTENT */
 
 .main__contentAbout {
-  border-radius: 30px 0 30px;
+  @include excentric-border-30;
   background-color: #0388a66c;
   box-shadow: 0 0 15px #f2310545;
   margin: 10px;
@@ -216,12 +219,11 @@ body {
 
 .main__welcomeText {
   background-color: #f23105;
-  border-radius: 30px 0 30px;
   padding: 5%;
   display: grid;
   grid-template-rows: 1fr, 3fr;
   justify-content: center;
-  box-shadow: 0 0 10px black;
+  @include excentric-border-30;
 }
 
 /* Media queries */
@@ -230,7 +232,7 @@ body {
 
   .main__welcomeText {
     background-color: #f2310595;
-    border-radius: 50px 0 50px;
+    @include excentric-border-50;
   }
 
 }
@@ -285,7 +287,7 @@ body {
     box-shadow: none;
 
     img {
-      border-radius: 50px 0 50px;
+      @include excentric-border-50;
       box-shadow: 0 0 10px #A9BF04;
     }
   }
@@ -364,12 +366,11 @@ body {
 
     div {
       margin: 15px;
-      border-radius: 30px 0 30px;
       padding: 5%;
       display: grid;
       grid-template-rows: 1fr, 3fr;
       justify-content: center;
-      box-shadow: 0 0 10px black;
+      @include excentric-border-30;
 
       a {
         text-shadow: 0 0 1px black;
@@ -422,38 +423,7 @@ body {
     padding: 10px;
   }
 
-  .contact__formMessage--buttons {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-
-    button {
-      font-weight: bold;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-transform: uppercase;
-      color: white;
-      transition: .1s ease-in;
-      transition: .3s ease-out;
-
-      &[type="submit"] {
-        background-color: #0388A695;
-      }
-
-      &[type="reset"] {
-        background-color: #f2310595;
-      }
-
-      &:hover {
-        background-color: transparent;
-        color: black;
-        box-shadow: 0 0 5px black;
-        cursor: pointer;
-      }
-    }
-  }
+@import 'extend-buttons';
 
   .GoogleMaps {
     padding: 25px;
@@ -484,7 +454,7 @@ body {
       div {
         margin: 25px;
         padding: 8%;
-        border-radius: 50px 0 50px;
+        @include excentric-border-50;
 
         a {
           font-size: 1.1rem;
@@ -580,12 +550,11 @@ body {
 
     div {
       margin: 15px;
-      border-radius: 30px 0 30px;
       padding: 5%;
       display: grid;
       grid-template-rows: 1fr, 3fr;
       justify-content: center;
-      box-shadow: 0 0 10px black;
+      @include excentric-border-30;
 
       a {
         text-shadow: 0 0 1px black;
@@ -595,11 +564,11 @@ body {
 
   /* Tambien aplican en Contact */
 
-  .giftCards {
+  .balloon--giftCards {
     background-color: #a9bf049d;
   }
 
-  .booking {
+  .balloon--booking {
     background-color: #f23105b1;
   }
 
@@ -614,7 +583,7 @@ body {
       div {
         margin: 25px;
         padding: 8%;
-        border-radius: 50px 0 50px;
+        @include excentric-border-50;
         a {
           font-size: 1.1rem;
         }
@@ -624,11 +593,11 @@ body {
 
     /* Tambien aplican en Contact */
 
-    .giftCards {
+    .balloon--giftCards {
       background-color: #a9bf0452;
     }
 
-    .booking {
+    .balloon--booking {
       background-color: #f2310560;
     }
 

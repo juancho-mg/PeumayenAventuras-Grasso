@@ -1,0 +1,34 @@
+.contact__formMessage--buttons {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  .boton {
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    transition: .1s ease-in;
+    transition: .3s ease-out;
+    &:hover {
+      background-color: transparent;
+      color: black;
+      box-shadow: 0 0 5px black;
+      cursor: pointer;
+    }
+    &-enviar {
+      @extend .boton;
+      background-color: #0388A695;
+    }
+    &-reset {
+      @extend .boton;
+      background-color: #f2310595;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,14 @@
+$redes: (instagram: #C13584,
+    facebook: #2956a3,
+    facebook-messenger: #0076b8,
+    whatsapp: #25D366,
+    at: red,
+);
+
+@each $red, $color in $redes {
+    .fa-#{$red} {
+        &:hover {
+            color: $color;
+        }
+    }
+}
