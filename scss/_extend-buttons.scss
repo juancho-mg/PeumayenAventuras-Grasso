@@ -13,16 +13,19 @@
     color: white;
     transition: .1s ease-in;
     transition: .3s ease-out;
+
     &:hover {
       background-color: transparent;
       color: black;
       box-shadow: 0 0 5px black;
       cursor: pointer;
     }
+
     &-enviar {
       @extend .boton;
       background-color: #0388A695;
     }
+
     &-reset {
       @extend .boton;
       background-color: #f2310595;
@@ -30,5 +33,3 @@
   }
 
 }
-
-

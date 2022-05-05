@@ -1,0 +1,128 @@
+@import 'mixins';
+/*  CONTACT  */
+
+.main__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__extraInfo {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  div {
+    margin: 15px;
+    padding: 5%;
+    display: grid;
+    grid-template-rows: 1fr, 3fr;
+    justify-content: center;
+    @include excentric-border-30;
+
+    a {
+      text-shadow: 0 0 1px black;
+    }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}
+
+/* CONTACT FORM */
+
+fieldset {
+  border: none;
+}
+
+.contact__form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact__formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  input {
+    margin: 10px;
+    height: 2.5rem;
+    padding: 1rem;
+    outline: none;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact__formCheckbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__formCheckboxItem {
+  padding: 10px;
+}
+
+@import 'extend-buttons';
+
+.GoogleMaps {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+
+  h4 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+  .main__contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__extraInfo {
+    justify-content: flex-start;
+    margin: 30px;
+    padding: 0;
+
+    div {
+      margin: 25px;
+      padding: 8%;
+      @include excentric-border-50;
+
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .contact__form {
+    margin: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .contact__extraInfo {
+    margin-top: 50px;
+  }
+
+  .GoogleMaps {
+    margin-bottom: 30px;
+  }
+}

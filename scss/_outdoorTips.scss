@@ -1,0 +1,33 @@
+/* OUTDOOR TIPS */
+
+.accordion-item {
+  background-color: #a9bf0412;
+}
+
+.accordion-button {
+
+  &.collapsed {
+    box-shadow: none;
+    background-color: #a9bf0412;
+  }
+
+  &:not(.collapsed) {
+    background-color: #f2310567;
+    color: black;
+    box-shadow: none;
+  }
+
+}
+
+.accordion-body {
+  max-height: 75vh;
+}
+
+.carouselTips {
+  max-width: 90vw;
+}
+
+.img-fluid {
+  max-height: 70vh;
+  max-width: 100%;
+}

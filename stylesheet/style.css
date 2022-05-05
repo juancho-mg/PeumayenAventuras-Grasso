@@ -14,7 +14,7 @@ a {
 
 body {
   background: url(../img/body-bg.png) no-repeat top left;
-  background-size: 100% 100%; }
+  background-size: cover; }
 
 /* NAVIGATION BAR */
 nav {
@@ -22,6 +22,12 @@ nav {
 
 .navbar div {
   padding: 0.5rem 1rem; }
+
+.navbar .navbar-toggler {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-left: -15px; }
 
 .header__logo {
   height: 4rem; }
@@ -59,16 +65,20 @@ nav {
     padding-top: 10%; }
 
 .landingContact {
-  background: url("../img/bannerContact.jpg") no-repeat top center; }
+  background: url("../img/bannerContact.jpg") no-repeat top center;
+  background-size: cover; }
 
 .landingActividades {
-  background: url("../img/bannerActividades.jpg") no-repeat top center; }
+  background: url("../img/bannerActividades.jpg") no-repeat top left;
+  background-size: cover; }
 
 .landingOutdoorTips {
-  background: url("../img/bannerOutdoorTips.jpg") no-repeat top center; }
+  background: url("../img/bannerOutdoorTips.jpg") no-repeat top left;
+  background-size: cover; }
 
 .landingReservas {
-  background: url("../img/bannerReservas.jpg") no-repeat top center; }
+  background: url("../img/bannerReservas.jpg") no-repeat top center;
+  background-size: cover; }
 
 .landingPages {
   width: 100%;
@@ -101,7 +111,8 @@ nav {
 .landing__contentLogo--Pages {
   margin-top: 6rem;
   max-height: 10rem;
-  object-fit: cover; }
+  object-fit: cover;
+  opacity: 60%; }
 
 .landing__contentText {
   color: #ffffff;
@@ -172,6 +183,17 @@ footer {
     footer .footer__contactText a:hover {
       color: white;
       text-shadow: 0 0 10px black; }
+  footer .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small; }
+    footer .copyright a {
+      transition: ease-in .2s;
+      transition: ease-out .5s; }
+      footer .copyright a:hover {
+        color: white;
+        text-shadow: 0 0 10px black; }
 
 /* Media queries */
 @media screen and (min-width: 768px) {
@@ -203,6 +225,28 @@ footer {
     background-color: #0388a6b8; }
     .greeting .greeting__text h1 {
       font-size: 6rem; } }
+
+/* HOME - WELCOME */
+.main__welcome {
+  padding: 50px 10% 100px 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.main__welcomeText {
+  background-color: #f23105;
+  padding: 5%;
+  display: grid;
+  grid-template-rows: 1fr, 3fr;
+  justify-content: center;
+  border-radius: 30px 0 30px;
+  box-shadow: 0 0 10px black; }
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .main__welcomeText {
+    background-color: #f2310595;
+    border-radius: 50px 0 50px; } }
 
 /* HOME - WELCOME CAROUSEL */
 .main__welcomeCarousel {
@@ -248,13 +292,13 @@ footer {
   100% {
     transform: translateX(0%); } }
 
-.carousel {
+.carouselHome {
   display: grid;
   grid-template-rows: 1fr;
   overflow-x: hidden; }
-  .carousel input {
+  .carouselHome input {
     display: none; }
-  .carousel label {
+  .carouselHome label {
     border-radius: 50%;
     cursor: pointer;
     margin: 0 .25rem;
@@ -271,9 +315,9 @@ footer {
   flex-direction: row;
   list-style: none;
   transition: transform 1s ease-in-out;
-  animation: carousel-slide infinite ease-in-out 30s; }
+  animation: carousel-slide infinite ease-in-out 60s; }
 
-.slide {
+.slideHome {
   width: 50vw;
   height: 100%;
   object-fit: cover; }
@@ -296,28 +340,6 @@ footer {
 .main__contentAboutItem {
   padding: 20px;
   display: block; }
-
-/* HOME - WELCOME */
-.main__welcome {
-  padding: 50px 10% 100px 10%;
-  display: flex;
-  justify-content: center;
-  text-align: center; }
-
-.main__welcomeText {
-  background-color: #f23105;
-  padding: 5%;
-  display: grid;
-  grid-template-rows: 1fr, 3fr;
-  justify-content: center;
-  border-radius: 30px 0 30px;
-  box-shadow: 0 0 10px black; }
-
-/* Media queries */
-@media screen and (min-width: 768px) {
-  .main__welcomeText {
-    background-color: #f2310595;
-    border-radius: 50px 0 50px; } }
 
 /* Media queries */
 @media screen and (min-width: 768px) {
@@ -500,8 +522,7 @@ fieldset {
     background-color: #0388a66c;
     margin: 3%;
     padding: 5px;
-    max-width: 90%;
-    max-height: 80vh; }
+    max-width: 90%; }
     .main__content--Actividades .card h2 {
       font-size: 1.6rem; }
     .main__content--Actividades .card h4 {
@@ -541,8 +562,8 @@ fieldset {
 .reservas div {
   margin: 15px;
   padding: 5%;
-  display: grid;
-  grid-template-rows: 1fr, 3fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   border-radius: 30px 0 30px;
   box-shadow: 0 0 10px black; }
@@ -578,7 +599,11 @@ fieldset {
   .reservas {
     margin: 50px; }
   .reservas div {
-    margin: 50px; } }
+    margin: 50px; }
+    .reservas div h2 {
+      font-size: 2rem; }
+    .reservas div p {
+      font-size: 1.2rem; } }
 
 /* OUTDOOR TIPS */
 .accordion-item {
@@ -592,3 +617,13 @@ fieldset {
   background-color: #f2310567;
   color: black;
   box-shadow: none; }
+
+.accordion-body {
+  max-height: 75vh; }
+
+.carouselTips {
+  max-width: 90vw; }
+
+.img-fluid {
+  max-height: 70vh;
+  max-width: 100%; }

@@ -3,12 +3,22 @@ nav {
   max-height: auto;
 }
 
-.navbar div {
-  padding: 0.5rem 1rem;
+.navbar {
+  div {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-toggler {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: -15px;
+  }
 }
 
 .header__logo {
   height: 4rem;
+
   img {
     height: 100%;
   }
@@ -24,6 +34,7 @@ nav {
 .dropdown-item {
   transition: ease-in 0.2s;
   transition: ease-out 0.5s;
+
   &:hover {
     color: #ffffff;
     background-color: #a9bf04;

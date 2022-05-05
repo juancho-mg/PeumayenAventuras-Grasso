@@ -1,0 +1,40 @@
+/* GREETING SECTION */
+
+.greeting {
+  display: block;
+  margin: 50px 0 50px 0;
+  padding: 50px 0 50px 0;
+  background-color: #0388a66c;
+
+  .greeting__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+
+    h1 {
+      font-size: 4rem;
+      text-shadow: 3px 3px 6px white;
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    h3 {
+      text-shadow: 2px 2px 3px white;
+    }
+  }
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+  .greeting {
+    margin: 100px 0 100px 0;
+    background-color: #0388a6b8;
+
+    .greeting__text {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  }
+}

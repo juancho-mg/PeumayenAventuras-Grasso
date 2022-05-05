@@ -5,7 +5,8 @@ $redes: (instagram: #C13584,
     at: red,
 );
 
-@each $red, $color in $redes {
+@each $red,
+$color in $redes {
     .fa-#{$red} {
         &:hover {
             color: $color;

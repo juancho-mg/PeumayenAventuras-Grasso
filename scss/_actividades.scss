@@ -1,0 +1,61 @@
+/* ACTIVIDADES */
+
+.main__content--Actividades {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    background-color: #0388a66c;
+    margin: 3%;
+    padding: 5px;
+    max-width: 90%;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    .carousel {
+      width: auto;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #a9bf04;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+  color: black;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-shadow: 0 0 15px black;
+    box-shadow: 0 0 10px transparent;
+    color: white;
+  }
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+  .main__content--Actividades {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .main__content--Actividades {
+    margin: 50px;
+
+    .card {
+      margin: 30px;
+    }
+  }
+}

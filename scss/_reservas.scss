@@ -1,0 +1,82 @@
+@import 'mixins';
+/* RESERVAS */
+
+.reservas {
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  div {
+    margin: 15px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include excentric-border-30;
+
+    a {
+      text-shadow: 0 0 1px black;
+    }
+  }
+}
+
+/* Tambien aplican en Contact */
+
+.balloon--giftCards {
+  background-color: #a9bf049d;
+}
+
+.balloon--booking {
+  background-color: #f23105b1;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .reservas {
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 0;
+
+    div {
+      margin: 25px;
+      padding: 8%;
+      @include excentric-border-50;
+
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+
+  /* Tambien aplican en Contact */
+
+  .balloon--giftCards {
+    background-color: #a9bf0452;
+  }
+
+  .balloon--booking {
+    background-color: #f2310560;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .reservas {
+    margin: 50px;
+  }
+
+  .reservas div {
+    margin: 50px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
