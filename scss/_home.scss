@@ -207,12 +207,10 @@
 
   .main__contentAboutItem3Img {
     grid-area: main__contentAboutItem3Img;
-
   }
 
   .main__contentAboutItem3Text {
     grid-area: main__contentAboutItem3Text;
-
   }
 
   .main__contentAbout {
@@ -251,11 +249,10 @@
   .main__contentAboutItem {
     align-content: center;
 
-    ul {
       li {
         list-style: disc;
       }
-    }
+
   }
 
 }

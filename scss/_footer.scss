@@ -4,6 +4,15 @@ footer {
   padding: 20px;
   background: linear-gradient(#0388A6, transparent);
 
+  .footer__contact {
+    .footer__contactLogo {
+      img {
+        max-height: 170px;
+        object-fit: scale-down;
+      }
+    }
+  }
+
   .footer__links {
     padding: 20px;
     width: 100%;

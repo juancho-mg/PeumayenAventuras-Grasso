@@ -5,6 +5,9 @@
   box-sizing: border-box;
   max-width: 100%; }
 
+ol, ul {
+  padding-left: 0; }
+
 li {
   list-style: none; }
 
@@ -145,6 +148,9 @@ nav {
 footer {
   padding: 20px;
   background: linear-gradient(#0388A6, transparent); }
+  footer .footer__contact .footer__contactLogo img {
+    max-height: 170px;
+    object-fit: scale-down; }
   footer .footer__links {
     padding: 20px;
     width: 100%;
@@ -385,7 +391,7 @@ footer {
     grid-template-areas: "main__contentAboutItem3Img   main__contentAboutItem3Text"; }
   .main__contentAboutItem {
     align-content: center; }
-    .main__contentAboutItem ul li {
+    .main__contentAboutItem li {
       list-style: disc; } }
 
 @media screen and (min-width: 1200px) {
